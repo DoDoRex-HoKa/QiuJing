@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.LWRP;
 using TMPro;
+using UnityEngine.Tilemaps;
 ///<summary>
 ///
 ///<\summary>
@@ -18,11 +19,16 @@ public class Item : MonoBehaviour
     public int id;
     public string statement;
     [HideInInspector] public bool isOpened;
+    [HideInInspector] public float boxMoveTime = 1f;
     [HideInInspector] public bool isLocked;
     [HideInInspector] public bool[] notes=new bool[4];
     [HideInInspector] public bool[] finalLocked = {true,true,true,true};
     [HideInInspector] public bool isLighted;
+    //used for lights
     public Sprite[] lightSprites = new Sprite[2];
+    //used for boxes
+    //public Tilemap walls;
+    //used for all
     public SpriteRenderer image;
     public TextMeshPro text;
     public new BoxCollider2D collider;
@@ -180,7 +186,7 @@ public class Item : MonoBehaviour
         Vector3 dir;
         float x = transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x,
             y = transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y;
-        if (Mathf.Abs(x)> Mathf.Abs(y))
+        if (Mathf.Abs(x) > Mathf.Abs(y))
         {
             if (x > 0)
                 dir = Vector3.right;
@@ -194,8 +200,17 @@ public class Item : MonoBehaviour
             else
                 dir = Vector3.down;
         }
-        transform.Translate( dir*Time.fixedDeltaTime);
-        GameObject.FindGameObjectWithTag("Player").transform.Translate( dir * Time.fixedDeltaTime);
+        StartCoroutine(BoxMove(dir));
+    }
+    IEnumerator BoxMove(Vector3 dir)
+    {
+        float t = 0;
+        while(t<=boxMoveTime)
+        {
+            transform.Translate(dir * Time.fixedDeltaTime/boxMoveTime);
+            t += Time.fixedDeltaTime;
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
     }
     private void OpenCase()
     {
@@ -203,7 +218,7 @@ public class Item : MonoBehaviour
         {
             GameObject key1 = Instantiate(Resources.Load<GameObject>("key1"));//path
             key1.transform.position = transform.position + new Vector3(1, 0);//position
-                                                                             //enemyAppear
+            //enemyAppear
             isOpened = true;
         }
         else
@@ -270,10 +285,6 @@ public class Item : MonoBehaviour
             GetComponentInChildren<Light2D>().enabled = false;
             isLighted = false;
         }
-    }
-    private void Read()
-    {
-
     }
     private void UnlockPuzzle()
     {

@@ -66,19 +66,7 @@ public class PlayerMouse : MonoBehaviour
             {
                 if (!showList)
                 {
-                    if(collision.GetComponent<Item>().type==Item.Type.Box)
-                    {
-                        if (Input.GetMouseButton(0))
-                        {
-                            gameObject.GetComponent<player>().enabled = false;
-                            collision.GetComponent<Item>().Action();
-                        }
-                        else
-                        {
-                            gameObject.GetComponent<player>().enabled = true;
-                        }
-                    }
-                    else if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(0))
                     {
                         collision.GetComponent<Item>().Action();
                     }
