@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1334,7 +1334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32276c30685046e47a61f88a826ffce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: {fileID: 655560141}
+  testItem: []
+  list: {fileID: 0}
 --- !u!1001 &707336473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1845,6 +1846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be565c9ee67f84a4493408bd504a648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  click: {fileID: 0}
   type: 1
 --- !u!61 &931159762
 BoxCollider2D:
@@ -3038,6 +3041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list: []
   pageCount: 0
+  statement: {fileID: 0}
 --- !u!212 &2103878550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3219,6 +3223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be565c9ee67f84a4493408bd504a648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  click: {fileID: 0}
   type: 0
 --- !u!61 &2145129167
 BoxCollider2D:
