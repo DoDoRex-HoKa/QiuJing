@@ -50,7 +50,7 @@ public class ItemList : MonoBehaviour
                 {
                     Item item = list[i];
                     item.gameObject.SetActive(true);
-                    item.transform.localPosition = new Vector3(0, -0.4f - 0.4f * (i % 4), transform.position.z - 1);
+                    item.transform.localPosition = new Vector3(0, 0.69f- 0.4f * (i % 4), transform.position.z - 1);
                 }
             }
             gameObject.SetActive(true);
@@ -102,6 +102,7 @@ public class ItemList : MonoBehaviour
     public void CloseItemList()
     {
         gameObject.SetActive(false);
+        statement.SetActive(false);
         Time.timeScale = 1;
     }
 }

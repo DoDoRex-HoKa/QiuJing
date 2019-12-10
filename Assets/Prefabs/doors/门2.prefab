@@ -131,8 +131,9 @@ MonoBehaviour:
   type: 5
   function: 0
   name: "\u95E82"
-  id: 0
+  id: 1
   statement: 
+  isOpened: 0
   isLocked: 0
   notes: 00000000
   finalLocked: 01010101
@@ -141,7 +142,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   image: {fileID: 2983842432537054808}
-  text: {fileID: 0}
+  text: {fileID: 698456539949099203}
   collider: {fileID: 2983842433591761323}
 --- !u!61 &2983842433591761323
 BoxCollider2D:
@@ -326,7 +327,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 11400000, guid: bd06aff4af203fc469c95980a37b873f, type: 2}
+  m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_overrideHtmlColors: 0
   m_faceColor:

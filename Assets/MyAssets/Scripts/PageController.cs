@@ -6,13 +6,14 @@ using UnityEngine;
 ///<\summary>
 public class PageController : MonoBehaviour
 {
-
+    public Sprite normal, click;
     public enum ButtonType { Last, Next }
     public ButtonType type;
-    public void OnMouseDown()
+    public void OnMouseOver()
     {
         if(Input.GetMouseButtonDown(0))
         {
+            GetComponent<SpriteRenderer>().sprite = click;
             switch (type)
             {
                 case ButtonType.Last:
@@ -25,5 +26,13 @@ public class PageController : MonoBehaviour
                     break;
             }
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            GetComponent<SpriteRenderer>().sprite = normal;
+        }
+    }
+    private void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().sprite = normal;
     }
 }

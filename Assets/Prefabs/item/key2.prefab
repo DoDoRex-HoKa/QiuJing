@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8, y: -0.068}
+  m_AnchoredPosition: {x: -0.13, y: 0}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3796442783401486170
@@ -74,9 +74,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1316460375
+  m_SortingLayer: 1
+  m_SortingOrder: 1
 --- !u!33 &1420474779607037847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 11400000, guid: bd06aff4af203fc469c95980a37b873f, type: 2}
+  m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_overrideHtmlColors: 0
   m_faceColor:
@@ -140,14 +140,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 2.2
-  m_fontSizeBase: 2.2
+  m_fontSize: 1.8
+  m_fontSizeBase: 1.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 2050
+  m_fontStyle: 1
+  m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -334,8 +334,9 @@ MonoBehaviour:
   type: 1
   function: 1
   name: "\u9E1F\u5599"
-  id: 0
+  id: 1
   statement: "\u8854\u7740\u8FD8\u5728\u6EF4\u7740\u8840\u6DB2\u7684\u751F\u8089\u7684\\n\u9E1F\u5599\uFF0C\u660E\u660E\u5DF2\u7ECF\u53FC\u7740\u8089\u95ED\u5634\\n\u4E86\u4F46\u662F\u8FD8\u662F\u611F\u89C9\u5B83\u5728\u53FD\u53FD\u55B3\\n\u55B3\uFF0C\u4EE4\u4EBA\u70E6\u8E81\u3002"
+  isOpened: 0
   isLocked: 0
   notes: 00000000
   finalLocked: 01010101
@@ -344,7 +345,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   image: {fileID: 4057919895733460712}
-  text: {fileID: 0}
+  text: {fileID: 5746432801430866117}
   collider: {fileID: 4057919895978658075}
 --- !u!61 &4057919895978658075
 BoxCollider2D:

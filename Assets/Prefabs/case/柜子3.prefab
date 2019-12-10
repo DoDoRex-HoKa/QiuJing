@@ -131,7 +131,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 11400000, guid: bd06aff4af203fc469c95980a37b873f, type: 2}
+  m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_overrideHtmlColors: 0
   m_faceColor:
@@ -256,6 +256,7 @@ MonoBehaviour:
   name: "\u67DC\u5B503"
   id: 0
   statement: 
+  isOpened: 0
   isLocked: 0
   notes: 00000000
   finalLocked: 01010101
@@ -264,7 +265,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   image: {fileID: 9220315358637056235}
-  text: {fileID: 0}
+  text: {fileID: 7449163874700031806}
   collider: {fileID: 6392613288207325409}
 --- !u!61 &6392613288207325409
 BoxCollider2D:

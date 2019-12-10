@@ -74,6 +74,9 @@ public class Item : MonoBehaviour
                     case Type.Paper:
                         UnlockPuzzle();
                         break;
+                    case Type.NoteBook:
+                        Unlock();
+                        break;
                 }
                 break;
         }
@@ -95,46 +98,63 @@ public class Item : MonoBehaviour
                         transform.localPosition = Vector3.zero;
 
                         text.gameObject.SetActive(true);
-                        text.fontSize = 2f;
+                        text.sortingOrder = 1;
+                        text.fontSize = 1.8f;
 
-                        collider.offset = new Vector2(1.51f, 0.01f);
+                        collider.offset = new Vector2(-0.4f, -0.01f);
                         collider.size = new Vector2(1.3f, 0.35f);
                         collider.isTrigger = false;
 
                         image.sortingLayerName = "UI";
                         image.sortingOrder = 1;
-                        image.transform.localPosition = new Vector3(1.1f, 0, 0);
+                        switch(id)
+                        {
+                            case 0:
+                                image.transform.localPosition = new Vector3(-0.8f, 0, 0);
+                                break;
+                            case 1:
+                                image.transform.localPosition = new Vector3(-0.8f, 0f, 0);
+                                image.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                                break;
+                            case 3:
+                                image.transform.localPosition = new Vector3(-0.78f, 0f, 0);
+                                image.transform.localScale = new Vector3(0.68f, 0.68f, 0.68f);
+                                break;
+                        }
                         break;
                     case Type.Paper:
                         transform.localScale = Vector3.one;
                         transform.localPosition = Vector3.zero;
 
                         text.gameObject.SetActive(true);
-                        text.fontSize = 2f;
+                        text.sortingOrder = 1;
+                        text.fontSize = 1.8f;
 
-                        collider.offset = new Vector2(1.51f, 0.01f);
+                        collider.offset = new Vector2(-0.4f, -0.01f);
                         collider.size = new Vector2(1.3f, 0.35f);
                         collider.isTrigger = false;
 
                         image.sortingLayerName = "UI";
                         image.sortingOrder = 1;
-                        image.transform.localPosition = new Vector3(1.1f, 0, 0);
+                        image.transform.localPosition = new Vector3(-0.77f, 0f, 0);
+                        image.transform.localScale = new Vector3(0.66f, 0.66f, 0.66f);
                         break;
                     case Type.NoteBook:
                         transform.localScale = Vector3.one;
                         transform.localPosition = Vector3.zero;
 
                         text.gameObject.SetActive(true);
-                        text.fontSize = 2f;
+                        text.sortingOrder = 1;
+                        text.fontSize = 1.8f;
 
-                        collider.offset = new Vector2(1.51f, 0.01f);
+                        collider.offset = new Vector2(-0.4f, -0.01f);
                         collider.size = new Vector2(1.3f, 0.35f);
                         collider.isTrigger = false;
                         
                         image.sortingLayerName = "UI";
                         image.sortingOrder = 1;
-                        image.transform.localPosition = new Vector3(1.117f, 0.018f, 0);
-                        image.transform.localScale = new Vector3(0.442f, 0.36f);
+                        image.transform.localPosition = new Vector3(-0.8f, 0f, 0);
+                        image.transform.localScale = new Vector3(0.36f, 0.36f, 0.36f);
                         break;
                 }
                 break;
@@ -147,14 +167,10 @@ public class Item : MonoBehaviour
         {
             if(type==Type.Key|| type == Type.Paper|| type == Type.NoteBook)
             {
-                FindObjectOfType<PlayerMouse>().itemList.statement.GetComponent<TextMeshPro>().text = statement;
+                FindObjectOfType<PlayerMouse>().itemList.statement.GetComponent<TextMeshProUGUI>().text = statement;
                 FindObjectOfType<PlayerMouse>().itemList.statement.SetActive(true);
             }
         }
-    }
-    private void OnMouseExit()
-    {
-        FindObjectOfType<PlayerMouse>().itemList.statement.SetActive(false);
     }
 
 

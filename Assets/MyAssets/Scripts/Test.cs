@@ -6,10 +6,14 @@ using UnityEngine;
 ///<\summary>
 public class Test : MonoBehaviour
 {
-    public Item testItem;
+    public List<Item> testItem;
     public ItemList list;
     private void Start()
     {
-        list.AddItem(testItem);
+        foreach(Item i in testItem)
+        {
+
+            list.AddItem(i);
+        }
     }
 }
