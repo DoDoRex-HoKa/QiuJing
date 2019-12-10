@@ -132,6 +132,7 @@ MonoBehaviour:
   name: "\u7B14\u8BB0\u672C"
   id: 0
   statement: "\u6EE1\u662F\u6298\u75D5\u7684\u7B14\u8BB0\u672C\uFF0C\u8BB0\u5F55\u7740\\n\u9EC4\u6D54\u7684\u7B14\u8BB0\uFF0C\u53EF\u662F\u91CC\u9762\u7684\u7EB8\\n\u5F20\u90FD\u88AB\u6495\u53BB\u4E86\u3002"
+  isOpened: 0
   isLocked: 0
   notes: 00000000
   finalLocked: 01010101
@@ -140,7 +141,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   image: {fileID: 2644967719617418977}
-  text: {fileID: 0}
+  text: {fileID: 6935138933209537915}
   collider: {fileID: 2644967720869249298}
 --- !u!61 &2644967720869249298
 BoxCollider2D:

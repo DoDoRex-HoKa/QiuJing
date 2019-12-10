@@ -256,6 +256,7 @@ MonoBehaviour:
   name: "\u95E84"
   id: 0
   statement: 
+  isOpened: 0
   isLocked: 0
   notes: 00000000
   finalLocked: 01010101
@@ -264,7 +265,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   image: {fileID: 4025556488361556267}
-  text: {fileID: 0}
+  text: {fileID: 6064979794795679611}
   collider: {fileID: 4025556488342580952}
 --- !u!61 &4025556488342580952
 BoxCollider2D:
